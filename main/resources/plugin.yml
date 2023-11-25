@@ -1,0 +1,6 @@
+name: ArenaMinigame
+version: '${project.version}'
+main: me.sirben085.arena.Minigame
+api-version: '1.20'
+commands:
+  arena:
