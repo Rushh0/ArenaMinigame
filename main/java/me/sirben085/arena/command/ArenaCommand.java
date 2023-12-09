@@ -3,6 +3,7 @@ package me.sirben085.arena.command;
 import me.sirben085.arena.GameState;
 import me.sirben085.arena.Minigame;
 import me.sirben085.arena.instance.Arena;
+import me.sirben085.arena.manager.LangManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -34,7 +35,7 @@ public class ArenaCommand implements CommandExecutor {
                 Arena arena = minigame.getArenaManager().getArena(player);
 
                 if (arena != null) {
-                    player.sendMessage(ChatColor.RED + "You left the arena ");
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', LangManager.getLeaveArena()));
                     arena.removePlayer(player);
                 } else {
                     player.sendMessage(ChatColor.RED + "You are not in an arena!");
